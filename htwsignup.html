@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up – Hot Beans Web</title>
+    <link rel="stylesheet" href="my_style_sheet.css">
+</head>
+
+<body>
+
+    <header class="homepage sticky">
+        <div class="title-group">
+            <h4>Your Pathway to Web Development Excellence</h4>
+        </div>
+
+        <nav>
+            <ul>
+                <li><button onclick="location.href='index.html'">Home Page</button></li>
+                <li><button onclick="location.href='htwabout.html'">About Us</button></li>
+                <li><button onclick="location.href='htwcourses.html'">Our Courses</button></li>
+                <li><button onclick="location.href='htwteam.html'">Meet the Team</button></li>
+                <li><button onclick="location.href='htwcontact.html'">Contact</button></li>
+                <li><button onclick="location.href='htwjobspec.html'">Job Specification</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <h2 style="text-align: center;">Create Your Account</h2>
+        <p>
+            Join the Hot Beans Web community by registering or logging in to get access to
+            special resources, interactive training, and individualised support to help you advance as a developer.
+        </p>
+    </section>
+
+    <section class="signup-section">
+
+        <form class="signup-form">
+
+            <h3>Sign Up</h3>
+
+            <label for="role">Registering as:</label>
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Select option</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+            </select>
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+            <div id="teacher-extra" style="display:none;">
+                <label for="expertise">Your Expertise:</label>
+                <input type="text" id="expertise" name="expertise" placeholder="Example: HTML, JavaScript, UI Design">
+                <label for="experience">Years of Experience:</label>
+                <input type="number" id="experience" name="experience" min="0" max="50" placeholder="Number of years">
+            </div>
+
+            <div id="student-extra" style="display:none;">
+                <label for="interest">Select a Course:</label>
+                <select id="interest" name="interest">
+                    <option value="html_css">HTML & CSS Foundations</option>
+                    <option value="javascript">JavaScript Basics</option>
+                    <option value="ui_ux">UI/UX Design Principles</option>
+                    <option value="full_stack">Full-Stack Development</option>
+                </select>
+            </div>
+
+            <button type="submit" class="signup-btn">Create Account</button>
+
+        </form>
+
+    </section>
+
+        <section class="hero-section">
+            <h2 style="text-align: center;">Already Have an Account?</h2>
+            <p>
+                By logging into your existing account, you can access personalized learning paths,
+                track your progress, and connect with our community of developers. Welcome back!
+            </p>
+        </section>
+
+    <section class="login-section">
+        <form class="login-form">
+            <h3>Already Have an Account?</h3>
+
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="login-email" placeholder="Enter your email" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" placeholder="Enter your password" required>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+    </section>
+
+    <section class="sendoff-section">
+        <h2>Ready to Start Your Coding Journey?</h2>
+        <p>
+            We appreciate your decision to become a member of our community. By registering, you're beginning the process of
+            developing your abilities and gaining access to new web development options. We can't wait to see what you produce and
+            are thrilled to accompany you on your adventure. Our staff is always there to help if you need it or have any questions.
+            Welcome on board!
+        </p>
+    </section>
+
+    <footer>
+        <a>Help</a>
+        <a>© 2025 Hot Beans — All Rights Reserved</a>
+        <a>Privacy Policy</a>
+        <a>Terms of Service</a>
+        <a>Anti-Slavery Statement</a>
+    </footer>
+
+    <script>
+        const roleSelect = document.getElementById("role");
+        const teacherExtra = document.getElementById("teacher-extra");
+        const studentExtra = document.getElementById("student-extra");
+
+        roleSelect.addEventListener("change", () => {
+            if (roleSelect.value === "teacher") {
+                teacherExtra.style.display = "block";
+                studentExtra.style.display = "none";
+            } else if (roleSelect.value === "student") {
+                studentExtra.style.display = "block";
+                teacherExtra.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

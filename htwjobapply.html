@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="WorkForUs.js"></script>
+    <link rel="stylesheet" type="text/css" href="my_style_sheet.css" />
+</head>
+<body>
+    
+    <header class="homepage sticky">
+    <img src="Hot Bean Website Logo.png" alt="  Hot Beans Web Logo" width="300" height="200">
+    <h1>Hot Beans Web</h1>
+    <h4>Your Pathway to Web Development Excellence</h4>
+    <nav>
+        <ul>
+            <li><button onclick="location.href='index.html'">Home Page</button></li>
+            <li><button onclick="location.href='htwabout.html'">About Us</button></li>
+            <li> <button onclick="location.href='htwcourses.html'">Our Courses</button></li>
+            <li><button onclick="location.href='htwteam.html'">Meet the Team</button></li>
+            <li><button onclick="location.href='htwcontact.html'">Contact</button></li>
+            <li><button onclick="location.href='htwjobspec.html'">Job Specification</button></li>
+            <li><button onclick="location.href='htwsignup.html'">Sign Up/Log In</button></li>
+        </ul>
+    </nav>
+
+</header>
+<section class="applynow-job">
+<h2>Please complete the following online application form</h2>
+<h3>All fields marked with a * are required</h3>
+<form name="VacancyApplicationForm" action="htwthankyou.html" method="get">
+
+<p>
+<label for="fname">* First Name:</label>
+<input type="text" id="fname" name="fname" />
+<label id="fNameError" class="Error"></label>
+</p>
+
+<p>
+<label for="sname">* Last Name:</label>
+<input type="text" id="sname" name="sname" />
+<label id="sNameError" class="Error"></label>
+</p>
+
+<p class="radio-group">
+<span>* Are you a UK resident?</span>
+<label><input type="radio" id="ukResidentYes" name="ukResident" value="Yes"> Yes</label>
+<label><input type="radio" id="ukResidentNo" name="ukResident" value="No"> No</label>
+<label id="ukResidentError" class="Error"></label>
+</p>
+
+
+<p>
+<label for="telNo">* Telephone Contact Details:</label>
+<input type="text" id="telNo" name="telNo" />
+<label id="telNoError" class="Error"></label>
+</p>
+
+
+<p>
+<label for="JobType">* Please select the job you are applying for:</label>
+<select name="JobType" id="JobType">
+<option value="Junior Web Developer">Junior Web Developer</option>
+<option value="Front-End Intern">Front-End Intern</option>
+<option value="UI/ UX Designer">UI/ UX Designer</option>
+<option value="Back-End Developer">Back-End Developer</option>
+<option value="Dev Ops Engineer">Dev Ops Engineer</option>
+<option value="QA Tester">QA Tester</option>
+</select>
+<label id="JobTypeError" class="Error"></label>
+</p>
+
+
+<p>
+<label for="txtAnyOtherInfo">Any other information to support your application:</label>
+<textarea id="txtAnyOtherInfo" name="txtAnyOtherInfo" rows="4"></textarea>
+</p>
+
+<p>
+<button type="submit" onclick="return ValidateVacancyForm()">Apply Now</button>
+</p>
+</form>
+</section>
+
+    <footer>
+        <a>Help</a>
+        <a>© 2025 Hot Beans — All Rights Reserved</a>
+        <a>Privacy Policy</a>
+        <a>Terms of Service</a>
+        <a>Anti-Slavery Statement</a>
+    </footer>
+</body>
+</html>
